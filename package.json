@@ -1,0 +1,32 @@
+{
+  "name": "ubosite2",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "@heroicons/vue": "^1.0.6",
+    "animate.css": "^4.1.1",
+    "daisyui": "^2.15.3",
+    "marked": "^4.0.18",
+    "vue": "^3.2.25",
+    "vue-kinesis": "^2.0.5",
+    "vue-material-design-icons": "^5.0.0",
+    "vue-router": "^4.0.16",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.2",
+    "vite": "^2.9.9"
+  }
+}

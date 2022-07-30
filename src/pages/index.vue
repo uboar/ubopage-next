@@ -1,0 +1,49 @@
+<template>
+    <div class="pt-24 lg:pt-0 lg:grid grid-row content-center h-screen">
+        <div class="lg:flex flex-row justify-center">
+            <div class="basis-1/2 mx-4 mb-8 mt-2">
+                <headline></headline>
+            </div>
+            <div class="basis-1/2 mx-4" id="links">
+                <p class="logo-font text-xl text-center border-b mb-8 mx-16 border-base-content">LINK TREE</p>
+                <links></links>
+            </div>
+        </div>
+        <div class="fixed bottom-4 right-4 lg:hidden" v-if="!chevronDownPushed">
+            <div class="tooltip tooltip-left" data-tip="リンク集までスクロール">
+                <button class="btn btn-circle btn-primary object-right-bottom" @click="jumpToLinks">
+                    <chevronDown></chevronDown>
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import Headline from '../components/headline.vue';
+import Links from '../components/links.vue';
+
+import chevronDown from 'vue-material-design-icons/chevronDown.vue'
+
+export default {
+    name: "index",
+    components: { Headline, Links, chevronDown },
+    mounted() {
+        document.title = `UBOPAGE`;
+    },
+    setup() {
+    },
+    data() {
+        return {
+            viewHeadLine: true,
+            chevronDownPushed: false,
+        }
+    },
+    methods:{
+        jumpToLinks(){
+            this.chevronDownPushed = true;
+            location.href="#links";
+        }
+    }
+}
+</script>
