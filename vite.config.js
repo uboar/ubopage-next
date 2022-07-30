@@ -17,6 +17,12 @@ export default defineConfig({
         'vue-material-design-icons/Soundcloud.vue',
         'vue-material-design-icons/Album.vue',
         'vue-material-design-icons/AccountCircle.vue',
+        'vue-material-design-icons/Play.vue',
+        'vue-material-design-icons/Pause.vue',
+        'vue-material-design-icons/InformationOutline.vue',
+        'vue-material-design-icons/chevronLeft.vue',
+        'vue-material-design-icons/chevronDown.vue',
+        'vue-kinesis'
       ],
     },
     commonjsOptions: {
