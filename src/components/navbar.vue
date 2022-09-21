@@ -15,6 +15,7 @@
                         <li><router-link class="logo-font" to="/">TOP</router-link></li>
                         <li class="hidden"><router-link class="logo-font" to="/about">ABOUT UBOAR</router-link></li>
                         <li><router-link class="logo-font" to="/albums">ALBUMS</router-link></li>
+                        <li><router-link class="logo-font" to="/singles">SINGLES</router-link></li>
                         <li class="hidden"><a class="logo-font">PLAYLISTS</a></li>
                     </ul>
                 </div>

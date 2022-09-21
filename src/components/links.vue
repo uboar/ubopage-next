@@ -51,6 +51,13 @@
                 <p class="text-xl ml-2">アルバム音源配布</p>
             </router-link>
         </div>
+        <div class="tooltip tooltip-top w-4/5 m-2 hidden" data-tip="まだアルバムになっていない未整理の音源をダウンロード出来ます。">
+            <router-link class="btn btn-primary btn-square btn-block btn-outline border-2 shadow"
+                to="singles">
+                <file-music-icon></file-music-icon>
+                <p class="text-xl ml-2">未整理音源保管所</p>
+            </router-link>
+        </div>
     </div>
 </template>
 <script>
@@ -61,9 +68,10 @@ import TelevisionClassicIcon from 'vue-material-design-icons/TelevisionClassic.v
 import soundcloudIcon from 'vue-material-design-icons/Soundcloud.vue';
 import albumIcon from 'vue-material-design-icons/Album.vue';
 import accountCircleIcon from 'vue-material-design-icons/AccountCircle.vue';
+import fileMusicIcon from 'vue-material-design-icons/FileMusic.vue';
 
 export default {
-    components: { YoutubeIcon, TelevisionClassicIcon, TwitterIcon, PostIcon, soundcloudIcon, albumIcon, accountCircleIcon },
+    components: { YoutubeIcon, TelevisionClassicIcon, TwitterIcon, PostIcon, soundcloudIcon, albumIcon, accountCircleIcon, fileMusicIcon },
     setup() {
 
     },

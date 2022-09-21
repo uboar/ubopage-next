@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-20">
+    <div class="pt-20 fade">
         <input type="checkbox" id="detailsModal" class="modal-toggle" />
         <label for="detailsModal" class="modal">
             <label class="modal-box max-w-4xl" for="">
@@ -14,7 +14,7 @@
                         <iframe width="640" height="360" :src="`https://www.youtube.com/embed/${detailsData.youtubeId}`"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen loading=lazy></iframe>
                     </div>
                 </div>
                 <div class="pt-4 whitespace-pre-line detailsDescription" v-html="markdown(detailsData.songDescription)">
@@ -30,7 +30,7 @@
             <div class="basis-1/3">
                 <div class="avatar shadow-lg">
                     <div class="w-full rounded-xl">
-                        <img :src="albumData.albumArtUrl" />
+                        <img :src="albumData.albumArtUrl" loading=lazy/>
                     </div>
                 </div>
                 <a :class="`btn btn-${albumData.downloadColor} btn-block btn-outline mt-2`"

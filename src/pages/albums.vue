@@ -3,9 +3,9 @@
         <div class="mx-8 text-6xl border-b border-base-content text-center logo-font">ALBUMS</div>
         <div class="flex flex-row flex-wrap justify-center">
             <router-link
-                class="card bg-base-100 shadow-xl hover:shadow-2xl w-96 m-16 hover:outline outline-offset-2 outline-1"
+                class="card bg-base-100 shadow-xl hover:shadow-2xl w-96 m-16 hover:outline outline-offset-2 outline-1 fade"
                 :to="item.path" :data-theme="item.theme" v-for="item in albumList" :key="item.name">
-                <figure><img :src="item.albumArtUrl" /></figure>
+                <figure><img :src="item.albumArtUrl" loading=lazy /></figure>
                 <div class="card-body">
                     <div class="card-title -my-2">{{ item.name }}</div>
                     <div class="divider -my-1"></div>

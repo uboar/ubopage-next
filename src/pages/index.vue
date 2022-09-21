@@ -1,10 +1,10 @@
 <template>
     <div class="pt-24 lg:pt-0 lg:grid grid-row content-center h-screen">
         <div class="lg:flex flex-row justify-center">
-            <div class="basis-1/2 mx-4 mb-8 mt-2">
+            <div class="basis-1/2 mx-4 mb-8 mt-2 fade">
                 <headline></headline>
             </div>
-            <div class="basis-1/2 mx-4" id="links">
+            <div class="basis-1/2 mx-4 fade" id="links">
                 <p class="logo-font text-xl text-center border-b mb-8 mx-16 border-base-content">LINK TREE</p>
                 <links></links>
             </div>

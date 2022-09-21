@@ -21,8 +21,8 @@ export default {
   setup() {
 
   },
-  methods:{
-    ba(){
+  methods: {
+    ba() {
       console.log(this.getTheme)
     }
   }
@@ -43,5 +43,21 @@ export default {
 
 #app {
   font-family: 'Kosugi', sans-serif;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.3s ease 0.2s 1 forwards;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+     transform: translateY(0);
+  }
 }
 </style>

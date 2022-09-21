@@ -8,11 +8,6 @@ export default defineConfig({
     include: ['marked']
   },
   build: {
-    rollupOptions: {
-      external:[
-        /node_modules/
-      ],
-    },
     commonjsOptions: {
       include: ['marked']
     }
