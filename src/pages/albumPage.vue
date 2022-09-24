@@ -30,7 +30,7 @@
             <div class="basis-1/3">
                 <div class="avatar shadow-lg">
                     <div class="w-full rounded-xl">
-                        <img :src="albumData.albumArtUrl" loading=lazy/>
+                        <img :src="albumData.albumArtUrl" loading=lazy />
                     </div>
                 </div>
                 <a :class="`btn btn-${albumData.downloadColor} btn-block btn-outline mt-2`"
@@ -113,6 +113,8 @@ export default {
     components: { pauseIcon, playIcon, infoIcon, chevronLeft },
     props: ['albumData'],
     created() {
+        document.head.querySelector('meta[property="og:title"]').setAttribute("content", this.albumData.albumName + " / UBOPAGE");
+        document.head.querySelector('meta[property="og:image"]').setAttribute("content", this.albumData.albumArtUrl);
         if (this.albumData.theme) {
             this.$store.commit('setTheme', this.albumData.theme);
         }

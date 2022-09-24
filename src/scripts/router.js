@@ -35,9 +35,9 @@ const router = createRouter({
             component: () => import("../pages/albums.vue")
         },
         {
-            name: "singles",
-            path: "/singles",
-            component: () => import("../pages/singles.vue")
+            name: "collection",
+            path: "/collection",
+            component: () => import("../pages/collection.vue")
         },
         {
             name: "fieldeffect",

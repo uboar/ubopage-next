@@ -51,11 +51,11 @@
                 <p class="text-xl ml-2">アルバム音源配布</p>
             </router-link>
         </div>
-        <div class="tooltip tooltip-top w-4/5 m-2 hidden" data-tip="まだアルバムになっていない未整理の音源をダウンロード出来ます。">
+        <div class="tooltip tooltip-top w-4/5 m-2" data-tip="今まで作ったものまとめ(一部)です。気が向いたら更新されます。">
             <router-link class="btn btn-primary btn-square btn-block btn-outline border-2 shadow"
-                to="singles">
+                to="collection">
                 <file-music-icon></file-music-icon>
-                <p class="text-xl ml-2">未整理音源保管所</p>
+                <p class="text-xl ml-2">作品集</p>
             </router-link>
         </div>
     </div>

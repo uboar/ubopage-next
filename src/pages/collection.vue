@@ -1,44 +1,28 @@
 <template>
     <div class="pt-24">
-        <input type="checkbox" id="detailsModal" class="modal-toggle" />
-        <label for="detailsModal" class="modal">
-            <label class="modal-box max-w-6xl" for="">
-                <h3 class="font-bold text-lg">{{ detailsData.name }}</h3>
-                <div class="flex justify-center mt-2 transition duration-500 ease-in-out" v-if="movieLoad">
-                    <div class="" v-if="detailsData.nicoId">
-                        <component :is="'script'"
-                            :src="`https://embed.nicovideo.jp/watch/${detailsData.nicoId}/script?w=640&h=360`">
-                        </component>
-                    </div>
-                    <div class="" v-if="detailsData.youtubeId">
-                        <iframe width="640" height="360" :src="`https://www.youtube.com/embed/${detailsData.youtubeId}`"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen loading=lazy></iframe>
-                    </div>
-                </div>
-                <div class="flex flex-row flex-wrap mt-8">
-                    <div class="badge badge-outline badge-accent mx-2" v-for="item in detailsData.tag" :key="item">{{item}}</div>
-                </div>
-                <div class="pt-4 whitespace-pre-line detailsDescription" v-html="markdown(detailsData.description)">
-                </div>
-                <div class="modal-action">
-                    <label for="detailsModal" class="btn">閉じる</label>
-                </div>
-            </label>
-        </label>
-        <div class="mx-8 text-6xl border-b border-base-content text-center logo-font">SEARCH</div>
+        <collectionDetailVue :detailsData="detailsData" :movieLoad="movieLoad"></collectionDetailVue>
+        <div class="mx-8 text-6xl border-b border-base-content text-center logo-font">COLLECTION</div>
         <div class="fade flex justify-center">
             <div class="lg:basis-2/3">
                 <div class="card shadow-lg bg-base-200 m-8">
                     <div class="card-body">
-                        <input type="text" placeholder="検索" class="input input-bordered w-full" v-model="searchText"
-                            @input="search" />
+                        <div class="flex">
+                            <input type="text" placeholder="検索(作品名・タグ名)" class="input input-bordered w-full"
+                                v-model="searchText" @input="search" />
+                            <div class="btn mx-2 btn-circle btn-outline" :class="searchText === '' ? 'btn-disabled' : ''" @click="searchText = ''; search();">
+                            <window-close-icon></window-close-icon></div>
+                        </div>
+                        <div class="divide-y"></div>
+                        <div class="flex flex-row flex-wrap mt-8">
+                            <div class="btn btn-accent btn-outline mx-2 btn-xs" v-for="item in searchTags" :key="item"
+                                @click="searchText = item; search();">
+                                {{item}}</div>
+                        </div>
                     </div>
                 </div>
                 <div class="card shadow-lg card-bordered bg-base-300">
                     <div class="card-body">
-                        <div class="card-title">一覧</div>
+                        <div class="card-title">一覧 / 検索結果</div>
                         <table class="table">
                             <thead>
                                 <tr class="logo-font">
@@ -47,7 +31,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="hover" v-for="item in singlesFilteredData" :key="item.name"
+                                <tr class="hover" v-for="item in collectionFilteredData" :key="item.name"
                                     style="cursor: pointer" @click="details(item)">
                                     <td>{{ item.name }}</td>
                                     <td>{{ item.date }}</td>
@@ -62,32 +46,51 @@
 </template>
 
 <script>
-import singlesData from "../assets/singles.json"
+import collectionData from "../assets/collection.json"
 import infoIcon from 'vue-material-design-icons/InformationOutline.vue'
+import windowCloseIcon from 'vue-material-design-icons/windowClose.vue'
+import collectionDetailVue from "../components/collectionDetail.vue";
 
 import { marked } from 'marked';
 import { nextTick } from 'vue';
+import { useRoute } from 'vue-router';
 
-let audio = new Audio();
 
 export default {
-    name: "singles",
-    components: { infoIcon },
+    name: "collection",
+    components: { infoIcon, windowCloseIcon, collectionDetailVue },
     mounted() {
-        document.title = `SINGLES - UBOPAGE`;
+        document.title = `COLLECTION - UBOPAGE`;
+        const route = useRoute();
+        if (route.query.id) {
+            const index = collectionData.findIndex((elem) => {
+                return elem.queryId === route.query.id
+            })
+            if (index >= 0) {
+                document.head.querySelector('meta[property="og:title"]').setAttribute("content", collectionData[index].name + " / UBOPAGE");
+                this.details(collectionData[index]);
+            }
+        }
     },
     setup() {
     },
     data() {
         return {
-            singlesFilteredData: singlesData,
-            descShow: false,
+            collectionFilteredData: collectionData,
             movieLoad: false,
             searchText: "",
             detailsData: {
                 name: "",
                 description: "",
             },
+            searchTags: [
+                "音楽",
+                "ニコニコメドレー",
+                "NEUTRINO",
+                "Remix",
+                "合作",
+                "オリジナル曲",
+            ],
         }
     },
     methods: {
@@ -97,8 +100,6 @@ export default {
         details: async function (item) {
             let modalElement = document.getElementById("detailsModal");
             this.movieLoad = false;
-            audio.pause();
-            this.currentPlayingTrack = 0;
             this.detailsData = item;
             modalElement.checked = true;
             modalElement.addEventListener("change", (e) => {
@@ -110,7 +111,7 @@ export default {
             this.movieLoad = true;
         },
         search() {
-            this.singlesFilteredData = singlesData.filter((elem) => {
+            this.collectionFilteredData = collectionData.filter((elem) => {
                 if (RegExp(this.searchText, "i").test(elem.name)) {
                     return true;
                 } else {
