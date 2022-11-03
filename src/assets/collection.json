@@ -1,5 +1,53 @@
 [
     {
+        "name": "時給300億円ほしい(Ya Barely Remix)",
+        "date": "2022-11-3",
+        "queryId": "b300metan",
+        "tag": [
+            "NEUTRINO",
+            "時給300億円ほしい",
+            "わかる",
+            "Remix",
+            "四国めたん"
+        ],
+        "description": "[かなり昔のネタ](https://www.nicovideo.jp/watch/sm29738148)を擦る",
+        "nicoId": "sm41318593",
+        "contents": [
+            {
+                "songName": "時給300億円ほしい(Ya Barely Remix)",
+                "download": "https://1drv.ms/u/s!Ah9aQE8ok168lioL08RYu_t7wlRM?e=IbfagV",
+                "songUrl": "https://public.bl.files.1drv.com/y4mDHcXVqsxWKqMoMT-se3btFWsNR--MjyCTlRkVnGPhBKV4iNFDRf7Ek9CN0UtLaj7Kuw0proDz7C4j0C_7kz97vix_ih2-KFv7soX2ObbTRzNJvJ-6EQNr3RpfTvAy1d_qPvRKLtW9hY-5maUpTJnpmQuvoAvaVsQrECgWghF4dVbb3VFh2aCP_OhhTmSbtQZUdGyvKV1CNuWm3wUZRJaASuf_DsXMeApr9UfGk9rPFk?"
+            },
+            {
+                "songName": "時給300億円ほしい(Ya Barely Remix Instrumental)",
+                "download": "https://1drv.ms/u/s!Ah9aQE8ok168liv7Bki423P_JnW8?e=rnpiET",
+                "songUrl": "https://public.bl.files.1drv.com/y4m8ETbcmVD_0cHEaLoMh6MQUsLMvPBbLQsti6FlNBdWERlisxpz7w7KRyBe658tnHLpH2zPEVkJBiI0FXC3zddppoA2wUbsI2-jHN_4NsK9lwuEcJ307a20xwPzJXJSR9rbNjKUuYYw2-oedWU3oQkEcxDY1RMrn5_MwujDe3Os-XiOrhmeLalcqVOA8X8Ns4H31cYZt0vPZ3AI7qbVJIShfviFx-KZTRDanPAJZ7iYgc?"
+            }
+        ]
+    },
+    {
+        "name": "voina",
+        "date": "2022-10-15",
+        "queryId": "voina",
+        "tag": [
+            "A.I.VOICE",
+            "VOICEVOX",
+            "琴葉茜",
+            "琴葉葵",
+            "voina",
+            "春日部つむぎ",
+            "ソフトウェア"
+        ],
+        "description": "rinna社のAPIとボイボ・ボイロを繋げるアプリです。",
+        "nicoId": "sm41236331",
+        "contents": [
+            {
+                "songName": "GitHubリポジトリ(ダウンロード)",
+                "download": "https://github.com/uboar/voina/releases"
+            }
+        ]
+    },
+    {
         "name": "CHAOS_",
         "date": "2022-09-21",
         "queryId": "chaosunderbar",
@@ -240,11 +288,11 @@
             },
             {
                 "songName": "現代デバフ(Instrumental)",
-                "songUrl": "https://1wmfza.bl.files.1drv.com/y4myV6KDG6lC9-6hfMf2Wrpt3NLXHwJc5Vb1_70vqgpR625JiTVOHCnTEusWrAfWisL5VlaRTGBKb_psJw8pxAoJ5LAhh2Q-fO0EjIgQZAWcWgGh0lI_KVWNOWuEshzmkjYklzxhoQuYX3OEa05OdpefjqitLRhR9sVT5zMzKdO4gVriRbGHmpQdG0aeEve-3U8Ym7TINiuZl97owWFYBX-xA?"          
+                "songUrl": "https://1wmfza.bl.files.1drv.com/y4myV6KDG6lC9-6hfMf2Wrpt3NLXHwJc5Vb1_70vqgpR625JiTVOHCnTEusWrAfWisL5VlaRTGBKb_psJw8pxAoJ5LAhh2Q-fO0EjIgQZAWcWgGh0lI_KVWNOWuEshzmkjYklzxhoQuYX3OEa05OdpefjqitLRhR9sVT5zMzKdO4gVriRbGHmpQdG0aeEve-3U8Ym7TINiuZl97owWFYBX-xA?"
             },
             {
                 "songName": "現代デバフ(Instrumental 2mix)",
-                "download": "https://1drv.ms/u/s!Ah9aQE8ok168kxX2MqscBmaKXHaR?e=1auHVA"      
+                "download": "https://1drv.ms/u/s!Ah9aQE8ok168kxX2MqscBmaKXHaR?e=1auHVA"
             }
         ]
     }
