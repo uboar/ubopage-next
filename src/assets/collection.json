@@ -1,5 +1,25 @@
 [
     {
+        "name": "Songable",
+        "date": "2022-12-10",
+        "queryId": "songable",
+        "tag": [
+            "音楽",
+            "ニコニコメドレー",
+            "GUMI",
+            "VOCALOID",
+            "ニコニコメドレー投稿祭2022"
+        ],
+        "description": "きっと歌いやすいメドレー",
+        "nicoId": "sm41487334",
+        "contents": [
+            {
+                "songName": "Songable欲張りセット(歌詞、2mix、オフボーカル、ガイドボーカル入り)",
+                "download": "https://1drv.ms/u/s!Ah9aQE8ok168ljmu221VLKwBkK83?e=rJ1B86"
+            }
+        ]
+    },
+    {
         "name": "時給300億円ほしい(Ya Barely Remix)",
         "date": "2022-11-3",
         "queryId": "b300metan",
